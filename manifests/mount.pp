@@ -22,7 +22,7 @@ define autofs::mount (
   concat::fragment { "autofs::mount ${path}:${mountpoint}":
     ensure  => $ensure,
     target  => $path,
-    content => "${mountpoint} ${map} ${options}\n",
+    content => "${mountpoint} ${options} ${map}\n",
     order   => '100',
   }
 

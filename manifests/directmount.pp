@@ -19,7 +19,6 @@ define autofs::directmount (
     path => $path
   }
 
-  # fichier /etc/auto.master
   concat::fragment { "autofs::mount ${path}:${mountpoint}":
     ensure  => $ensure,
     target  => $path,

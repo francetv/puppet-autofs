@@ -6,8 +6,8 @@ Puppet module for managing Autofs mountpoints and files.
 ### Some Contrived Example usage
 
 ``` puppet
-  autofs::mount { '/share':
-    map     => ' /etc/auto.common',
+  autofs::directmount { '/share':
+    location => '/etc/auto.common',
     options => ' --ghost --timeout=30',
     }      
   autofs::mount { 'dir1':

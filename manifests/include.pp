@@ -21,5 +21,4 @@ define autofs::include (
     content => "+${map}\n",
     order   => '200',
   }
-
 }

@@ -26,5 +26,4 @@ class autofs::params {
       fail("osfamily not supported: ${::osfamily}")
     }
   }
-
 }

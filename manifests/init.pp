@@ -11,5 +11,4 @@ class autofs {
     enable  => true,
     require => Package[$autofs::params::package],
   }
-
 }

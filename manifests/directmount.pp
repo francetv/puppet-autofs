@@ -20,10 +20,8 @@ define autofs::directmount (
   }
 
   concat::fragment { "autofs::mount ${path}:${mountpoint}":
-    ensure  => $ensure,
     target  => $path,
     content => "${mountpoint} ${location} ${options}\n",
     order   => '100',
   }
-
 }
